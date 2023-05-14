@@ -697,7 +697,7 @@ footer .lines .line::after{
     font-weight: 400;
     line-height: 30px;
 }
-.team .card h4 ,
+.team .card h3 ,
 .team .card p{
     transition: var(--transition);
 }
