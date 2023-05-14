@@ -1,0 +1,131 @@
+/* ----------------------- media query -------------------------- */
+@media (min-width: 768px) and (max-width:991px){
+    .home .row{
+        margin-top: 27px;
+    }
+    .home .row .home-text{
+        margin-top: 9px;
+    }
+    .home .row .home-text h1{
+        font-size: 39px;
+        margin-bottom: 15px;
+    }
+    .home .row .home-text p{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .advertisment .row{
+        margin-top: 0 !important;
+    }
+    .advertisment .row .advertisment-info p {
+        font-size: 15px;
+        line-height:normal;
+    }
+    .banner.contact ,
+    .banner.about{
+        height: 55vh;
+    }
+    .banner .banner-text p{
+        font-size: 16px !important;
+        margin-bottom: 24px !important;
+    }
+    .error_text p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-toggler.collapsed .top-bar {
+        margin-top: -14px;
+    }
+    .navbar-toggler.collapsed .bottom-bar{
+        margin-top: 15px;
+    }
+    .home{
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .home-services, .work , .partners{
+        padding-top: 0;
+    }
+    .home .row{
+        flex-direction: column-reverse;
+        gap: 6px;
+    }
+    .home .row .home-text{
+        text-align: center;
+    }
+    .main-heading h3 {
+        font-size: 28px;
+    }
+    .advertisment .row {
+        padding-top: 0 !important;
+        gap: 0 !important;
+    }
+    .advertisment .row .advertisment-img img {
+        top:0;
+        left: 0;
+    }
+    .advertisment .row .advertisment-info p {
+        font-size: 13px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 0;
+    }
+    .box-btn,
+    .second_button {
+        margin-top: 0 !important;
+    }
+    .contact{
+        height: 60vh;
+    }
+    .banner .banner-text{
+        text-align: center;
+        margin-top: 32px;
+    }
+    .error-page .row{
+        flex-direction: column-reverse;
+    }
+    .error_text{
+        text-align: center;
+    }  
+}
+@media (max-width: 576px) { 
+    .home .row .home-text h1{
+        margin-bottom: 13px;
+        font-size: 28px;
+    }
+    .home .row .home-text p{
+        font-size: 14px;
+        margin-bottom: 26px;
+    }
+    .home .home-img .img-bulb {
+        right: 27%;
+    }
+    /* contact page */
+    .contact .contact-text h1{
+        font-size: 28px;
+    }
+    .contact .contact-text p{
+        gap: 4px;
+        font-size: 13px;
+    }
+    .services .services-text h1, 
+    .about .about-text h1{
+        font-size: 20px;
+        margin-bottom: 5px !important;
+    }
+    .services .services-text p, .about .about-text p {
+        font-size: 20px;
+    }
+    .main-services .box-head h3 {
+        font-size: 14px;
+    }
+    .main-services .box-head .button {
+        padding: 10px 20px;
+    }
+    .banner .banner-text p{
+        margin-bottom: 25px !important;
+        font-size: 16px !important;
+    }
+}

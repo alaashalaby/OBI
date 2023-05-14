@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Cairo', sans-serif !important;
+}
+body{
+    direction: rtl;
+}
+h1{
+    font-weight: 700;
+}
+p{
+    font-size: 18px !important;
+}
+.button{
+    font-size: 18px !important;
+}
+.owl-carousel{
+    direction: ltr;
+}
+.owl-carousel .owl-item{
+    direction: rtl;
+}
+.error-message {
+    font-size: 14px !important;
+}
+input[type=email]{
+    direction: rtl;
+}
+footer .box ul {
+    padding-right: 0 !important;
+}
+@media (max-width: 991px){
+    .navbar-nav .nav-item .nav-link {
+        border-right: 3px solid var(--whiteColor);
+        border-left: 0 !important;
+    }
+}
+@media (max-width: 767px){
+    .error-page .row{
+        flex-direction: column-reverse;
+    }
+    .error_text{
+        text-align: center;
+    } 
+}
