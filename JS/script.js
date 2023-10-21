@@ -1,44 +1,44 @@
 $('.partner-carousel').owlCarousel({
-    loop:true,
-    autoplay:true,
-    margin:15,
-    dots:false,
-    slideTransition:'linear',
-    autoplayTimeout:4500,
-    autoplaySpeed:4500,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:2,
-            nav:false
+    loop: true,
+    autoplay: true,
+    margin: 15,
+    dots: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 4500,
+    autoplaySpeed: 4500,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 2,
+            nav: false
         },
-        500:{
-            items:3,
-            nav:false
+        500: {
+            items: 3,
+            nav: false
         },
-        600:{
-            items:3,
-            nav:false
+        600: {
+            items: 3,
+            nav: false
         },
-        800:{
-            items:4,
-            nav:false
+        800: {
+            items: 4,
+            nav: false
         },
-        1000:{
-            items:8,
-            nav:false,
-            loop:false
+        1000: {
+            items: 8,
+            nav: false,
+            loop: false
         },
-        1200:{
-            items:8,
-            nav:false,
-            loop:false
+        1200: {
+            items: 8,
+            nav: false,
+            loop: false
         }
     }
 });
 /* =================== preloader ================= */
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
         document.querySelector("body").classList.add("loaded");
     }, 100)
 });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let navigation = document.getElementById("navigation");
 
-window.addEventListener("scroll" , function(){
+window.addEventListener("scroll", function () {
     navigation.classList.toggle("sticky", window.scrollY > 0);
 })
 /* ===================== scroll to top ====================== */
@@ -74,20 +74,31 @@ window.onload = calcScrollValue;
 
 let map;
 async function initMap() {
-  const position = { lat: -25.344, lng: 131.031 };
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const position = { lat: 24.385954, lng: 45.079162 };
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "OBI",
-  });
+    map = new Map(document.getElementById("map"), {
+        zoom: 6,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+    });
+    const locations = [
+        { name: "Branch1", lat: 24.876732834451555, lng: 46.61623047116414 },
+        { name: "Branch2", lat: 24.631394217942862, lng: 46.734209401851004 },
+        { name: "Branch3", lat: 24.629142282707736, lng: 46.565581011672016 },
+    ];
+    for (const location of locations) {
+        const marker = new AdvancedMarkerElement({
+            map: map,
+            position: { lat: location.lat, lng: location.lng },
+            title: location.name,
+        });
+    }
+    marker.addListener("click", function () {
+        map.setZoom(6);
+        map.setCenter(marker.getPosition());
+    });
 }
 
 initMap();
@@ -103,7 +114,7 @@ let contactForm = document.getElementById("formcontact");
 let errorMsg = document.querySelectorAll(".error-message");
 let popup = document.getElementById("popupbox");
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     if (!validateForm()) {
         e.preventDefault();
     }
@@ -125,7 +136,7 @@ function validateForm() {
         showError('Please Enter your message.');
         return false;
     }
-    if(messageInput.value.trim() !== ''){
+    if (messageInput.value.trim() !== '') {
         popup.classList.add("open-popup");
         return false;
     }
@@ -135,7 +146,7 @@ function showError(msg) {
     errorMsg.textContent = msg;
     errorMsg.style.display = 'block';
 }
-function closePopup(){
+function closePopup() {
     popup.classList.remove("open-popup");
 }
 
