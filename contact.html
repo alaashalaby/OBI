@@ -98,130 +98,43 @@
     <!-- ================================= Start Content =========================== -->
     <section class="content">
         <div class="container">
-            <div class="row">
-                <ul class="nav nav-pills mb-3 align-items-center justify-content-center" id="pills-tab" role="tablist" data-aos="zoom-in">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active tab-link" id="pills-main-tab" data-bs-toggle="pill" data-bs-target="#pills-main" role="tab" aria-controls="pills-main" aria-selected="true">Main Branch</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link tab-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Second Branch</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link tab-link" id="pills-branch-tab" data-bs-toggle="pill" data-bs-target="#pills-branch" role="tab" aria-controls="pills-branch" aria-selected="false">Third Branch</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-main" role="tabpanel" aria-labelledby="pills-main-tab">
-                        <div class="row mt-5 position-relative gy-3 align-items-center">
-                            <div class=" col-lg-6 col-sm-12">
-                                <div class="box-iframe" data-aos="fade-up">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31579.639655315317!2d114.60864720978208!3d-8.356825055120684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd161ff99e8a4c5%3A0xf68296e1c797e518!2zTmVnYXJhLCDZhtmK2LrYp9ix2Kcg2KjYp9mE2YrYjCBKZW1icmFuYSBSZWdlbmN5LCDYqNin2YTZitiMINil2YbYr9mI2YbZitiz2YrYpw!5e0!3m2!1sar!2seg!4v1676955304237!5m2!1sar!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100 h-100"></iframe>
-                                </div>
-                            </div>
-                            <div class=" col-lg-6 col-sm-12">
-                                <div class="box-form" data-aos="fade-up">
-                                    <form id="formcontact" class="position-relative">
-                                        <div class="input-box position-relative">
-                                            <input type="text" placeholder="Enter Your Name" name="username" class="username" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <input type="email" placeholder="Enter Your Email" name="useremail" class="useremail" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <textarea name="message" placeholder="Enter Your Message" class="usermessage" ></textarea>
-                                            <p class="error-message mt-0">Error Message</p>
-                                        </div>
-                                        <div class="input-button">
-                                            <input type="submit" value="Send Message" class="submitbtn" onclick="validateForm()">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="form-popup" id="popupbox">
-                                <i class='bx bx-check'></i>
-                                <h3>The message has been sent successfully</h3>
-                                <p>You will be answered within 24 hours</p>
-                                <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <div class="row mt-5 position-relative gy-3">
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="box-iframe" data-aos="fade-up">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31579.639655315317!2d114.60864720978208!3d-8.356825055120684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd161ff99e8a4c5%3A0xf68296e1c797e518!2zTmVnYXJhLCDZhtmK2LrYp9ix2Kcg2KjYp9mE2YrYjCBKZW1icmFuYSBSZWdlbmN5LCDYqNin2YTZitiMINil2YbYr9mI2YbZitiz2YrYpw!5e0!3m2!1sar!2seg!4v1676955304237!5m2!1sar!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100 h-100"></iframe>
-                                </div>
-                            </div>
-                            <div class=" col-lg-6 col-sm-12">
-                                <div class="box-form" data-aos="fade-up">
-                                    <form class="position-relative">
-                                        <div class="input-box position-relative">
-                                            <input type="text" placeholder="Enter Your Name" name="username" class="username" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <input type="email" placeholder="Enter Your Email" name="useremail" class="useremail" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <textarea name="message" placeholder="Enter Your Message" class="usermessage" ></textarea>
-                                            <p class="error-message mt-0">Error Message</p>
-                                        </div>
-                                        <div class="input-button">
-                                            <input type="submit" value="Send Message" class="submitbtn" onclick="validateForm()">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="form-popup" id="popupbox">
-                                <i class='bx bx-check'></i>
-                                <h3>The message has been sent successfully</h3>
-                                <p>You will be answered within 24 hours</p>
-                                <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-branch" role="tabpanel" aria-labelledby="pills-branch-tab">
-                        <div class="row mt-5 position-relative gy-3">
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="box-iframe" data-aos="fade-up">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.6311088663615!2d46.6162412!3d24.876445699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2eef28fac08fbd%3A0x82fa650c621ea927!2z2LTYsdmD2Kkg2KPZiNio2Yog2YTZhNiv2LnYp9mK2Kkg2YjYp9mE2KfYudmE2KfZhiDYrdmKINin2YTYudin2LHYtg!5e0!3m2!1sar!2ssa!4v1696806318503!5m2!1sar!2ssa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100 h-100"></iframe>
-                                </div>
-                            </div>
-                            <div class=" col-lg-6 col-sm-12">
-                                <div class="box-form" data-aos="fade-up">
-                                    <form class="position-relative">
-                                        <div class="input-box position-relative">
-                                            <input type="text" placeholder="Enter Your Name" name="username" class="username" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <input type="email" placeholder="Enter Your Email" name="useremail" class="useremail" >
-                                            <p class="error-message">Error Message</p>
-                                        </div>
-                                        <div class="input-box box">
-                                            <textarea name="message" placeholder="Enter Your Message" class="usermessage" ></textarea>
-                                            <p class="error-message mt-0">Error Message</p>
-                                        </div>
-                                        <div class="input-button">
-                                            <input type="submit" value="Send Message" class="submitbtn" onclick="validateForm()">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="form-popup" id="popupbox">
-                                <i class='bx bx-check'></i>
-                                <h3>The message has been sent successfully</h3>
-                                <p>You will be answered within 24 hours</p>
-                                <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
-                            </div>
-                        </div>
+            <div class="main-heading text-center" data-aos="zoom-in">
+                <h2 class="position-relative">Find The Nearest Branch</h2>
+            </div>
+            <div class="row mt-5 position-relative gy-3">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="box-iframe" data-aos="fade-up" id="map">
                     </div>
                 </div>
+                 <div class=" col-lg-6 col-sm-12">
+                    <div class="box-form" data-aos="fade-up">
+                        <form class="position-relative">
+                            <div class="input-box position-relative">
+                                <input type="text" placeholder="Enter Your Name" name="username" class="username" >
+                                <p class="error-message">Error Message</p>
+                            </div>
+                            <div class="input-box box">
+                                <input type="email" placeholder="Enter Your Email" name="useremail" class="useremail" >
+                                <p class="error-message">Error Message</p>
+                            </div>
+                            <div class="input-box box">
+                                <textarea name="message" placeholder="Enter Your Message" class="usermessage" ></textarea>
+                                <p class="error-message mt-0">Error Message</p>
+                            </div>
+                            <div class="input-button">
+                                <input type="submit" value="Send Message" class="submitbtn" onclick="validateForm()">
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <div class="form-popup" id="popupbox">
+                        <i class='bx bx-check'></i>
+                        <h3>The message has been sent successfully</h3>
+                        <p>You will be answered within 24 hours</p>
+                        <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
+                    </div>
+                    </div>
             </div>
-        </div>
     </section>
     <!-- ================================= Start footer =========================== -->
     <footer>
@@ -289,7 +202,8 @@
         <span id="progress-value"><i class='bx bx-up-arrow-alt'></i></span>
     </div>
 
-    
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyC9lN0B2EalTvLS_dNDWE1BmCBKLTDZxsI", v: "beta"});</script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="JS/jquery.min.js"></script>
     <script src="JS/bootstrap.bundle.min.js"></script>
