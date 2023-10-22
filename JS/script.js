@@ -104,12 +104,6 @@ async function initMap() {
 initMap();
 
 
-
-
-
-
-
-
 let contactForm = document.getElementById("formcontact");
 let errorMsg = document.querySelectorAll(".error-message");
 let popup = document.getElementById("popupbox");
