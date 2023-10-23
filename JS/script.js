@@ -73,7 +73,7 @@ window.onload = calcScrollValue;
 /* map */
 
 let map;
-async function initMap() {
+async function initMap(locations) {
     const position = { lat: 24.7136, lng: 46.6753 };
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
@@ -83,23 +83,7 @@ async function initMap() {
         center: position,
         mapId: "DEMO_MAP_ID",
     });
-    const locations = [
-        {
-            name: "Main Branch",
-            lat: 24.629134,
-            lng: 46.565593
-        },
-        {
-            name: "Second Branch",
-            lat: 24.631234,
-            lng: 46.734135,
-        },
-        {
-            name: "Third Branch",
-            lat: 24.876463,
-            lng: 46.616225,
-        },
-    ];
+
     for (const location of locations) {
         const marker = new AdvancedMarkerElement({
             map: map,
@@ -113,8 +97,6 @@ async function initMap() {
         })
     }
 }
-
-initMap();
 
 /* ======================================= */
 

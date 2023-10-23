@@ -126,15 +126,15 @@
                             </div>
                         </form>
                     </div>
-                    </div>
-                    <div class="form-popup" id="popupbox">
-                        <i class='bx bx-check'></i>
-                        <h3>The message has been sent successfully</h3>
-                        <p>You will be answered within 24 hours</p>
-                        <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
-                    </div>
-                    </div>
+                </div>
+                <div class="form-popup" id="popupbox">
+                    <i class='bx bx-check'></i>
+                    <h3>The message has been sent successfully</h3>
+                    <p>You will be answered within 24 hours</p>
+                    <a href="#"><button type="button" onclick="closePopup()">OK</button></a>
+                </div>
             </div>
+        </div>
     </section>
     <!-- ================================= Start footer =========================== -->
     <footer>
@@ -212,6 +212,26 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        initMap([
+            {
+                name: "Main Branch",
+                lat: 24.629134,
+                lng: 46.565593
+            },
+            {
+                name: "Second Branch",
+                lat: 24.631234,
+                lng: 46.734135,
+            },
+            {
+                name: "Third Branch",
+                lat: 24.876463,
+                lng: 46.616225,
+            },
+        ]);
     </script>
 </body>
 </html>
