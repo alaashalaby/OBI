@@ -79,7 +79,7 @@ async function initMap() {
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     map = new Map(document.getElementById("map"), {
-        zoom: 8,
+        zoom: 6,
         center: position,
         mapId: "DEMO_MAP_ID",
     });
