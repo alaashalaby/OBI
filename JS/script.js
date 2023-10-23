@@ -79,14 +79,22 @@ async function initMap() {
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     map = new Map(document.getElementById("map"), {
-        zoom: 6,
+        zoom: 8,
         center: position,
         mapId: "DEMO_MAP_ID",
     });
     const locations = [
-        { name: "Branch1", lat: 24.876732834451555, lng: 46.61623047116414 },
-        { name: "Branch2", lat: 24.631394217942862, lng: 46.734209401851004 },
-        { name: "Branch3", lat: 24.629142282707736, lng: 46.565581011672016 },
+      { name: "Main Branch", lat: 24.629138015869895, lng: 46.565595763815466 },
+      {
+        name: "Second Branch",
+        lat: 24.63144298091494,
+        lng: 46.73411284232928,
+      },
+      {
+        name: "Third Branch",
+        lat: 24.87666470091326,
+        lng: 46.616230471164634,
+      },
     ];
     for (const location of locations) {
         const marker = new AdvancedMarkerElement({
@@ -103,6 +111,7 @@ async function initMap() {
 
 initMap();
 
+/* ======================================= */
 
 let contactForm = document.getElementById("formcontact");
 let errorMsg = document.querySelectorAll(".error-message");

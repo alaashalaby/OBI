@@ -804,11 +804,11 @@ footer .lines .line::after{
     color: var(--whiteColor);
     background: var(--bgGradient) !important;
 }
-.box-iframe{
+.box-map{
     height: 461px;
 }
-.box-iframe,
-.box-iframe iframe{
+.box-map,
+.box-map iframe{
     border-radius: 10px;
 }
 .box-form{
