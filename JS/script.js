@@ -84,7 +84,11 @@ async function initMap() {
         mapId: "DEMO_MAP_ID",
     });
     const locations = [
-        { name: "Main Branch", lat: 24.629134, lng: 46.565593 },
+        {
+            name: "Main Branch",
+            lat: 24.629134,
+            lng: 46.565593
+        },
         {
             name: "Second Branch",
             lat: 24.631234,
@@ -102,11 +106,12 @@ async function initMap() {
             position: { lat: location.lat, lng: location.lng },
             title: location.name,
         });
+
+        marker.addListener("click", function({ domEvent, latLng }) {
+            map.setZoom(100);
+            map.setCenter({lat: latLng.lat(), lng: latLng.lng()});
+        })
     }
-    marker.addListener("click", function () {
-        map.setCenter(marker.getPosition());
-        map.setZoom(100);
-    });
 }
 
 initMap();
