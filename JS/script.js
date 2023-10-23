@@ -74,12 +74,12 @@ window.onload = calcScrollValue;
 
 let map;
 async function initMap() {
-    const position = { lat: 24.385954, lng: 45.079162 };
+    const position = { lat: 24.7136, lng: 46.6753 };
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     map = new Map(document.getElementById("map"), {
-        zoom: 6,
+        zoom: 10,
         center: position,
         mapId: "DEMO_MAP_ID",
     });
