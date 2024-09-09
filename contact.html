@@ -110,19 +110,19 @@
                     <div class="box-form" data-aos="fade-up">
                         <form class="position-relative">
                             <div class="input-box position-relative">
-                                <input type="text" placeholder="Enter Your Name" name="username" class="username" >
-                                <p class="error-message">Error Message</p>
+                                <input type="text" placeholder="Enter Your Name" name="username" class="form-control username" >
+                                <p class="error-message" id="usernameMessage"></p>
                             </div>
                             <div class="input-box box">
-                                <input type="email" placeholder="Enter Your Email" name="useremail" class="useremail" >
-                                <p class="error-message">Error Message</p>
+                                <input type="email" placeholder="Enter Your Email" name="useremail" class="form-control useremail" >
+                                <p class="error-message" id="emailMessage"></p>
                             </div>
                             <div class="input-box box">
-                                <textarea name="message" placeholder="Enter Your Message" class="usermessage" ></textarea>
-                                <p class="error-message mt-0">Error Message</p>
+                                <textarea name="message" placeholder="Enter Your Message" class="form-control usermessage" ></textarea>
+                                <p class="error-message mt-0" id="textMessage"></p>
                             </div>
                             <div class="input-button">
-                                <input type="submit" value="Send Message" class="submitbtn" onclick="validateForm()">
+                                <button type="submit" class="submitbtn btn">Send Message</button>
                             </div>
                         </form>
                     </div>

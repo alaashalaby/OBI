@@ -787,10 +787,8 @@ footer .lines .line::after{
 .error-message{
     color: red;
     font-size: 14px;
-    margin-top: 6px;
-    margin-left: 4px;
-    margin-bottom: 4px;
-    visibility: hidden;
+    /* margin: 6px 0 0 4px; */
+    height:14px;
 }
 .contact .contact-text p{
     gap: 7px;
@@ -834,7 +832,6 @@ form .input-box textarea{
     padding: 1px 10px 0 13px;
     height: 45px;
     color: var(--bgColor);
-    transition: var(--transition);
     font-size: 16px;
 }
 form .input-box textarea{
@@ -846,7 +843,7 @@ form .input-box input::placeholder,
 form .input-box textarea::placeholder{
     color: var(--bgColor);
 }
-form .input-button input[type="submit"]{
+form .input-button .submitbtn{
     border: none;
     width: 100%;
     color: var(--whiteColor);
