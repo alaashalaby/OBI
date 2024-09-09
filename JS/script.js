@@ -99,46 +99,81 @@ async function initMap(locations) {
 }
 
 /* ======================================= */
+const form = document.querySelector("form");
+const popup = document.getElementById("popupbox");
+const userName = document.querySelector(".username");
+const userEmail = document.querySelector(".useremail");
+const userMessage = document.querySelector(".usermessage");
+const submitBtn = document.querySelector(".submitbtn");
+let usernameErrorMsg = document.getElementById("usernameMessage");
+let emailErrorMessage = document.getElementById("emailMessage");
+let textErrorMessage = document.getElementById("textMessage");
 
-let contactForm = document.getElementById("formcontact");
-let errorMsg = document.querySelectorAll(".error-message");
-let popup = document.getElementById("popupbox");
-
-contactForm.addEventListener('submit', function (e) {
-    if (!validateForm()) {
-        e.preventDefault();
-    }
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 });
-function validateForm() {
-    let nameInput = document.getElementsByName('username')[0];
-    let emailInput = document.getElementsByName('useremail')[0];
-    let messageInput = document.getElementsByName('message')[0];
-    let emailRegex = /^\S+@\S+\.\S+$/;
-    if (nameInput.value.trim() === '') {
-        showError('Please Enter your name.');
-        return false;
-    }
-    if (!emailRegex.test(emailInput.value)) {
-        showError('Please Enter a valid email.');
-        return false;
-    }
-    if (messageInput.value.trim() === '') {
-        showError('Please Enter your message.');
-        return false;
-    }
-    if (messageInput.value.trim() !== '') {
-        popup.classList.add("open-popup");
-        return false;
-    }
+function validateInputs(value, regex, errorElement, message, inputElement) {
+  if (regex.test(value.trim())) {
+    errorElement.innerHTML = "";
+    inputElement.classList.add("is-valid");
+    inputElement.classList.remove("is-invalid");
     return true;
+  } else {
+    errorElement.innerHTML = message;
+    inputElement.classList.add("is-invalid");
+    inputElement.classList.remove("is-valid");
+    return false;
+  }
 }
-function showError(msg) {
-    errorMsg.textContent = msg;
-    errorMsg.style.display = 'block';
+
+// Validate form inputs
+function validateForm() {
+  const isValidName = validateInputs(
+    userName.value,
+    /^[a-zA-Z\s]+$/,
+    usernameErrorMsg,
+    "UserName is Required",
+    userName
+  );
+  const isValidEmail = validateInputs(
+    userEmail.value,
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    emailErrorMessage,
+    "Please Enter a Valid Email",
+    userEmail
+  );
+  const isValidMessage = validateInputs(
+    userMessage.value,
+    /^[a-zA-Z\s]+$/,
+    textErrorMessage,
+    "Message is Required",
+    userMessage
+  );
+  return isValidName && isValidEmail && isValidMessage;
 }
+// Event listeners
+userName.addEventListener("input", validateForm);
+userEmail.addEventListener("input", validateForm);
+userMessage.addEventListener("input", validateForm);
+
+function resetInputs() {
+  userName.value = "";
+  userEmail.value = "";
+  userMessage.value = "";
+  // Remove validation classes from all inputs
+  [userName, userEmail, userMessage].forEach((input) => {
+    input.classList.remove("is-valid", "is-invalid");
+  });
+}
+function showPopup() {
+  popup.classList.add("open-popup");
+}
+submitBtn.addEventListener("click", () => {
+  if (validateForm()) {
+    resetInputs();
+    showPopup();
+  }
+});
 function closePopup() {
     popup.classList.remove("open-popup");
 }
-
-/* ======================================= */
-
